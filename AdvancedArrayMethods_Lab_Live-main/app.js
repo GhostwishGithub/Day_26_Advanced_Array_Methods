@@ -259,16 +259,51 @@ let chickpeas = problemSix();
 console.log("Does it have chickpeas? ", chickpeas)
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
-
-
+//!!!NOTICE!!! this problem has been commented out for ease of testing
+// function problemSeven(){
+//     let results;
+//         user_input = prompt("Which ingredient would you like to search for? tomato, cheese, flour, sugar, beef, cabbage, chickpea, parsley?: ")
+//         results = dishes.filter(function(el){
+//             console.log("Searching for ingredients", el)
+//             if(el.ingredients.includes(user_input)){
+//                 return true;
+//             }
+//             else{
+//                 return false;
+//             }
+//         })
+//         return results;
+// }
+// let userinputIngredients = problemSeven();
+// console.log("This many results had that ingredient: ", userinputIngredients)
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
-
-
+//doesn't work. I asked for help and got how to do 8b, not 8a.
+// function problemEightEh(){
+//     let results;
+//     results = dishes.filter(function(el){
+//         console.log("Trying to get the cuisine type.", el)
+//         let i = 0;
+//         while (i < dishes.length){
+//             i++;
+//             return dishes.cuisine;
+//         }
+//     })
+//     return results;
+// }
+// let cuisinetype = problemEightEh();
+// console.log("Here's the types: ", cuisinetype)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
+
+function problemNine(item){
+    return [item.name,item.cuisine].join(" ");
+}
+
+let smooshed = dishes.map(problemNine);
+console.log("Let's see if this worked: ", smooshed)
 
 
 
