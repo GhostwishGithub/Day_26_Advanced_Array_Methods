@@ -242,8 +242,21 @@ console.log("Count is even: ", evencount)
 //Double Hint: Research 'javascript does array include item'
 //Filter
 
-
-
+function problemSix(){
+    let results;
+    results = dishes.filter(function(el){
+        console.log("Finding all the chickpeas~", el)
+        if(el.ingredients.includes("chickpea")){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+    return results;
+}
+let chickpeas = problemSix();
+console.log("Does it have chickpeas? ", chickpeas)
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
 
