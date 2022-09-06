@@ -159,14 +159,34 @@ console.log('Vegetarian food from problemOne: ', vegetarianFood)
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
+//!!!NOTICE!!! this section has been commented out to expediate testing of other problems.
+// function problemTwo(){
 
-function problemTwo(){
+//     let results;
+//         user_input = prompt("Which cuisine type would you like to search for? Italian, Mexican, French, Irish, Vegetarian, Hungarian, or Vietnamese?: ")
+//         results = dishes.filter(function(el){
+//             console.log("The user input filter has been activated.", el)
+//             if(el.cuisine === user_input){
+//                 return true;
+//             }
+//             else{
+//                 return false;
+//             }
+//         })
+//         return results;
+// }
+// let userinputFood = problemTwo();
+// console.log("This many results: ", userinputFood)
+
+//3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
+//Filter
+
+function problemThree(){
 
     let results;
-        user_input = prompt("Which cuisine type would you like to search for? Italian, Mexican, French, Irish, Vegetarian, Hungarian, or Vietnamese?: ")
         results = dishes.filter(function(el){
-            console.log("The user input filter has been activated.", el)
-            if(el.cuisine === user_input){
+            console.log("The italian meals for fat people has been activated", el)
+            if(el.cuisine === "Italian" && el.servings > 5){
                 return true;
             }
             else{
@@ -175,13 +195,8 @@ function problemTwo(){
         })
         return results;
 }
-let userinputFood = problemTwo();
-console.log("This many results: ", userinputFood)
-
-//3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
-//Filter
-
-
+let fatfood = problemThree();
+console.log("Big italian meals: ", fatfood)
 
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
