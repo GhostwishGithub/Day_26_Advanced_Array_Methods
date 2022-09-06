@@ -201,7 +201,22 @@ console.log("Big italian meals: ", fatfood)
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
+function problemFour(){
 
+    let results;
+    results = dishes.filter(function(el){
+        console.log("The id matcher has been activated. Forsake all hope.", el)
+        if(el.servings === el.id){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+    return results;
+}
+let idmatch = problemFour();
+console.log("Id matching: ", idmatch)
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
