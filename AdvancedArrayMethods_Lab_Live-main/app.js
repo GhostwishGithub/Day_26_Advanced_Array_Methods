@@ -280,20 +280,11 @@ console.log("Does it have chickpeas? ", chickpeas)
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 //doesn't work. I asked for help and got how to do 8b, not 8a.
-// function problemEightEh(){
-//     let results;
-//     results = dishes.filter(function(el){
-//         console.log("Trying to get the cuisine type.", el)
-//         let i = 0;
-//         while (i < dishes.length){
-//             i++;
-//             return dishes.cuisine;
-//         }
-//     })
-//     return results;
-// }
-// let cuisinetype = problemEightEh();
-// console.log("Here's the types: ", cuisinetype)
+function problemEightEh(cuisine){
+    return cuisine.cuisine;
+}
+let cuisinetype = dishes.map(problemEightEh);
+console.log("Here's the types: ", cuisinetype)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
